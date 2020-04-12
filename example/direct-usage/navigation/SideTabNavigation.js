@@ -1,15 +1,8 @@
-# React Navigation Side Tabs
-
-Implements same navigation concepts as [@react-navigation](https://reactnavigation.org/) with some changes to support side navbar, with fully functional links and support for several methods already well documented into their docs
-
-## Implementation
-
-```javascript
 import React from 'react';
 
-import { createSideTabNavigator } from './index'
-import Home from '../../screens/HomeScreen';
-import Link from '../../screens/LinksScreen';
+import { createSideTabNavigator } from 'react-navigation-side-tabs';
+import Home from '../screens/HomeScreen';
+import Link from '../screens/LinksScreen';
 import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createSideTabNavigator();
@@ -20,10 +13,13 @@ const App = () => {
       initialRouteName="LinkScreen"
       tabBarOptions={{
         activeTintColor: '#e91e63',
-        iconHorizontal: true || false,
-        iconSize: 32,
-        labelSize: 32,
-        showLabel: true,
+        // iconHorizontal: true,
+        // iconHorizontal: false,
+        // iconSize: 32,
+        // // labelSize: 32,
+        // showLabel: true,
+        // // showLabel: false,
+        // // tabWidth: 30,
         tabWidth: 130
       }}
     >
@@ -60,13 +56,3 @@ const App = () => {
 
 
 export default App
-
-```
-
-New supported options for tabbar:
-
-    iconHorizontal: true || false,
-    iconSize: 32,
-    labelSize: 32,
-    showLabel: true,
-    tabWidth: 130
