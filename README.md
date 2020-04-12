@@ -159,7 +159,12 @@ Used to define the title in each screen, currently notsupporting stack navigatio
 </Tab.Navigator>
 ```
 
+## Example web screen-shot
+![Web side tab example](/web-screenshot.png "Web side tab example")
+
 ## Roadmap
 - Implement TS Support (Even using the base TS method from navigation, i've optioned to use vanillaJS because i don't quite familiar yet with TS, any help is well received!)
 - Give more support for Header implementation
 - Implements Eslint
+- Redeploys npm package
+- Create zeit.co web demos
