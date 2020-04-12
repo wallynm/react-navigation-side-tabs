@@ -2,9 +2,26 @@
 
 Implements same navigation concepts as [@react-navigation](https://reactnavigation.org/) with some changes to support side navbar, with fully functional links and support for several methods already well documented into their docs
 
-## Implementation
+## Support 
+|  EmulatorAndroid  |  DeviceAndroid  |  EmulatoriOS  |  DeviceiOS  |  SimulatorWeb  |
+|:-----------------:|:---------------:|:-------------:|:-----------:|:--------------:|
+|        ❓         |       ✅        |      ✅      |     ❓      |       ✅       |
 
-```javascript
+## Instalation
+React-navigation-side-tabs depends into the @react-navigation package as mentioned above, i've tryed to keep as many support i could for the same properties.
+We can disscuss improvements and new properties
+
+```
+$ yarn add react-navigation-side-tabs
+or
+$ npm install react-navigation-side-tabs --save
+```
+
+## Implementation
+I've implemented two basic projects, one of them is using `bottom-navigation` and other that only uses this package.
+You can download and try yourself the package working, here's a basic implementation
+
+```js
 import React from 'react';
 
 import { createSideTabNavigator } from './index'
@@ -20,7 +37,7 @@ const App = () => {
       initialRouteName="LinkScreen"
       tabBarOptions={{
         activeTintColor: '#e91e63',
-        iconHorizontal: true || false,
+        iconHorizontal: true,
         iconSize: 32,
         labelSize: 32,
         showLabel: true,
@@ -63,10 +80,86 @@ export default App
 
 ```
 
-New supported options for tabbar:
+## Important properties
+Some of these properties already ued into the navigation package, but here they have some special use cases that need a special attention        
+        
+`Tab.Navigator.iconHorizontal`
+Defines if the the orientation of the icons and their labels, defaults for horizontal,
+```js
+<Tab.Navigator
+  tabBarOptions={{
+    iconHorizontal: true
+  }}
+>
+  ...
+</Tab.Navigator>
+```
 
-    iconHorizontal: true || false,
-    iconSize: 32,
-    labelSize: 32,
-    showLabel: true,
-    tabWidth: 130
+
+`Tab.Navigator.iconSize`
+You can customize each icon size directly into the component passed to the `Navigator` component, but i recommend using this property because we apply some validations and treatment using the iconSize to guarantee the labels width doesn't overflow the side panel.
+ ```js
+<Tab.Navigator
+  tabBarOptions={{
+    iconSize: 32
+  }}
+>
+  ...
+</Tab.Navigator>
+```
+
+`Tab.Navigator.labelSize`
+Defines the fontSize of the labels located into the side panel, you may don't need this if you configure only to show icons
+ ```js
+<Tab.Navigator
+  tabBarOptions={{
+    labelSize: 12
+  }}
+>
+  ...
+</Tab.Navigator>
+```
+
+`Tab.Navigator.showLabel`
+Defines if the render only icons or also respectivelly labels
+ ```js
+<Tab.Navigator
+  tabBarOptions={{
+    labelSize: 12
+  }}
+>
+  ...
+</Tab.Navigator>
+```
+
+`Tab.Navigator.tabWidth`
+By default, the sidetab width gonna be directly related to the iconSize if any value given, you configure your own width also.
+ ```js
+<Tab.Navigator
+  tabBarOptions={{
+    tabWidth: 160
+  }}
+>
+  ...
+</Tab.Navigator>
+```
+
+
+`Tab.Screen.title`
+Used to define the title in each screen, currently notsupporting stack navigation
+ ```js
+<Tab.Navigator>
+  <Tab.Screen
+    options={{
+      title: 'Home Title Screen'
+    }}
+  >
+    ...
+  </Tab.Screen>
+</Tab.Navigator>
+```
+
+## Roadmap
+- Implement TS Support (Even using the base TS method from navigation, i've optioned to use vanillaJS because i don't quite familiar yet with TS, any help is well received!)
+- Give more support for Header implementation
+- Implements Eslint
