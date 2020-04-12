@@ -1,4 +1,4 @@
-# React Navigation Side Tabs
+# react-navigation-side-tabs
 
 Implements same navigation concepts as [@react-navigation](https://reactnavigation.org/) with some changes to support side navbar, with fully functional links and support for several methods already well documented into their docs
 
@@ -11,7 +11,7 @@ Implements same navigation concepts as [@react-navigation](https://reactnavigati
 React-navigation-side-tabs depends into the @react-navigation package as mentioned above, i've tryed to keep as many support i could for the same properties.
 We can disscuss improvements and new properties
 
-```
+```js
 $ yarn add react-navigation-side-tabs
 or
 $ npm install react-navigation-side-tabs --save
