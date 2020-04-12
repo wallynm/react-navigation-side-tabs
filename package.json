@@ -1,0 +1,72 @@
+{
+  "name": "react-navigation-side-tabs",
+  "description": "Side tab navigator following same implementaion as @react-navigation/bottom-tabs",
+  "version": "0.0.1",
+  "main": "lib/commonjs/index.js",
+  "react-native": "src/index.tsx",
+  "module": "lib/module/index.js",
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native",
+    "react-navigation",
+    "react-navigation-side-tabs",
+    "side-tabs",
+    "tabs",
+    "ios",
+    "android",
+    "tab"
+  ],
+  "license": "MIT",
+  "repository": "git@github.com:wallynm/react-navigation-side-tabs.git",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "bob build",
+    "clean": "del lib"
+  },
+  "dependencies": {
+    "color": "^3.1.2",
+    "react-native-iphone-x-helper": "^1.2.1"
+  },
+  "devDependencies": {
+    "@react-native-community/bob": "^0.10.0",
+    "@react-navigation/native": "^5.1.5",
+    "@types/color": "^3.0.1",
+    "@types/react": "^16.9.23",
+    "@types/react-native": "^0.61.22",
+    "del-cli": "^3.0.0",
+    "react": "~16.9.0",
+    "react-native": "~0.61.5",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-screens": "^2.3.0",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "@react-navigation/native": "^5.0.5",
+    "react": "*",
+    "react-native": "*",
+    "react-native-safe-area-context": ">= 0.6.0",
+    "react-native-screens": ">= 2.0.0-alpha.0 || >= 2.0.0-beta.0 || >= 2.0.0"
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}
