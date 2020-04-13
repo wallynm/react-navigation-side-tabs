@@ -1,7 +1,7 @@
 {
   "name": "react-navigation-side-tabs",
   "description": "Side tab navigator following same implementaion as @react-navigation/bottom-tabs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.js",
   "module": "lib/module/index.js",
@@ -18,7 +18,10 @@
     "tab"
   ],
   "license": "MIT",
-  "repository": "git@github.com:wallynm/react-navigation-side-tabs.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wallynm/react-navigation-side-tabs"
+  },
   "files": [
     "src",
     "lib"
