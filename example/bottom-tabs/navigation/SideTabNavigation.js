@@ -41,7 +41,7 @@ const App = () => {
         name="LinkScreen"
         component={Link}
         options={{
-          tabBarLabel: 'Updates sada dasdas',
+          tabBarLabel: 'Updates',
           titleIcon: () => (
             <Ionicons name="md-home"  color={'#000'} size={20} />
           ),

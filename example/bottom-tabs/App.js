@@ -18,7 +18,7 @@ export default function App(props) {
   const [initialNavigationState, setInitialNavigationState] = React.useState();
   const containerRef = React.useRef();
   const { getInitialState } = useLinking(containerRef);
-  const { width } = useDimensions('screen')
+  const { width } = useDimensions('window')
 
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {
@@ -50,11 +50,11 @@ export default function App(props) {
     return null;
   } else {
     return (
-      <View style={[styles.container, { width }]}>
+      <View style={[styles.container]}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
-            {width <= 500 ? (
+            {width <= 600 ? (
               <Stack.Screen name="Root" component={SideTabNavigation} />
             ) : (
               <Stack.Screen name="Root" component={BottomTabNavigator} />
