@@ -55,7 +55,7 @@ function SideTabItem ({
 
   // Only allow to show the label when the tabWidth has sufficient space
   // to show at least some letters, in other case forces the labels to not show
-  const controlShowLabel = (tabWidth > minTabWidth) && showLabel;
+  const controlShowLabel = showLabel || (tabWidth > minTabWidth) && showLabel;
   
   // As we have other font configured into Android we need to control
   // the size With a different multiplier
