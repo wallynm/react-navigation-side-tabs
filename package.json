@@ -1,7 +1,7 @@
 {
   "name": "react-navigation-side-tabs",
   "description": "Side tab navigator following same implementaion as @react-navigation/bottom-tabs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.js",
   "module": "lib/module/index.js",

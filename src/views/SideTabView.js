@@ -38,15 +38,16 @@ const SideTabView = (props) => {
   } = props
   const { routes } = state;
   const [loaded, setLoaded] = useState([state.index]);
- 
+
   useEffect(() => {
     setLoaded([...loaded, state.index])
   }, [state.index]);
 
-
   return (
     <SafeAreaProviderCompat>
-      <View style={styles.container}>
+      <View style={[
+        styles.container
+      ]}>
         <TabBarView {...props}/>
         <ScreenContainer style={styles.pages}>
           {routes.map((route, index) => {
@@ -88,7 +89,6 @@ SideTabView.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
     flexDirection: 'row',
     flex: 1,
     overflow: 'hidden',

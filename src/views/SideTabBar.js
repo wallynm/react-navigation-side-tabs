@@ -59,9 +59,6 @@ export default function SideTabBar({
             {
               backgroundColor: colors.card,
               borderRightColor: colors.border,
-            },
-            {
-              // height: DEFAULT_TABBAR_HEIGHT + (insets ? insets.bottom : 0),
               paddingTop: insets ? insets.top : 0,
             },
             style,
@@ -144,7 +141,7 @@ export default function SideTabBar({
               );
             })}
           </View>
-        </Animated.View>
+        </Animated.Viewa>
       )}
     </SafeAreaConsumer>
   );
