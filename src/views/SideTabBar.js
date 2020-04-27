@@ -141,7 +141,7 @@ export default function SideTabBar({
               );
             })}
           </View>
-        </Animated.Viewa>
+        </Animated.View>
       )}
     </SafeAreaConsumer>
   );
