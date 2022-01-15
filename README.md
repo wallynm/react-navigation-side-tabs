@@ -8,7 +8,7 @@ Implements same navigation concepts as [@react-navigation](https://reactnavigati
 |        ❓         |       ✅        |      ✅      |     ❓      |       ✅       |
 
 ## Instalation
-React-navigation-side-tabs depends into the @react-navigation package as mentioned above, i've tryed to keep as many support i could for the same properties.
+React-navigation-side-tabs depends into the @react-navigation package as mentioned above, I've tried to keep as many support I could for the same properties.
 We can disscuss improvements and new properties
 
 ```js
@@ -18,8 +18,8 @@ $ npm install react-navigation-side-tabs --save
 ```
 
 ## Implementation
-I've implemented two basic projects, one of them is using `bottom-navigation` and other that only uses this package.
-You can download and try yourself the package working, here's a basic implementation
+I've implemented two basic projects, one of them is using `bottom-navigation` and the other that only uses this package.
+You can download and try the package working for yourself. Here's a basic implementation
 
 ```js
 import React from 'react';
@@ -81,10 +81,10 @@ export default App
 ```
 
 ## Important properties
-Some of these properties already ued into the navigation package, but here they have some special use cases that need a special attention        
+Some of these properties are already used in the navigation package, but here they have some special use cases that need special attention.        
         
 `Tab.Navigator.iconHorizontal`
-Defines if the the orientation of the icons and their labels, defaults for horizontal,
+Defines the orientation of the icons and their labels, default is horizontal.
 ```js
 <Tab.Navigator
   tabBarOptions={{
@@ -109,7 +109,7 @@ You can customize each icon size directly into the component passed to the `Navi
 ```
 
 `Tab.Navigator.labelSize`
-Defines the fontSize of the labels located into the side panel, you may don't need this if you configure only to show icons
+Defines the fontSize of the labels located into the side panel, you may not need this if you configure only to show icons
  ```js
 <Tab.Navigator
   tabBarOptions={{
@@ -121,7 +121,7 @@ Defines the fontSize of the labels located into the side panel, you may don't ne
 ```
 
 `Tab.Navigator.showLabel`
-Defines if the render only icons or also respectivelly labels
+Defines if to render only icons or labels also.
  ```js
 <Tab.Navigator
   tabBarOptions={{
@@ -133,7 +133,7 @@ Defines if the render only icons or also respectivelly labels
 ```
 
 `Tab.Navigator.tabWidth`
-By default, the sidetab width gonna be directly related to the iconSize if any value given, you configure your own width also.
+By default, the sidetab width is going to be directly related to the iconSize if any value is not given, you configure your own width also.
  ```js
 <Tab.Navigator
   tabBarOptions={{
@@ -146,7 +146,7 @@ By default, the sidetab width gonna be directly related to the iconSize if any v
 
 
 `Tab.Screen.title`
-Used to define the title in each screen, currently notsupporting stack navigation
+Used to define the title in each screen, currently not supporting stack navigation
  ```js
 <Tab.Navigator>
   <Tab.Screen
@@ -163,7 +163,7 @@ Used to define the title in each screen, currently notsupporting stack navigatio
 ![Web side tab example](/web-screenshot.png "Web side tab example")
 
 ## Roadmap
-- Implement TS Support (Even using the base TS method from navigation, i've optioned to use vanillaJS because i don't quite familiar yet with TS, any help is well received!)
+- Implement TS Support (Even using the base TS method from navigation, I've optioned to use vanillaJS because I'm not quite familiar with TS yet, any help is welcome!
 - Give more support for Header implementation
 - Implements Eslint
 - Redeploys npm package
